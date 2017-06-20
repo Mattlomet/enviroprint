@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Utilities.css";
 
 class Utilities extends Component {
     constructor(props) {
@@ -13,9 +14,11 @@ class Utilities extends Component {
     }
     render() {
         return (
-            <div>
-                <div>
-                    <h2>How many people live in your house?</h2>
+            <div className="utilities-div">
+                <div className="utilities-question1">
+                    <h2 className="utilities-question1-header">
+                        How many people live in your house?
+                    </h2>
                     <select onChange={this.setResidence}>
                         <option />
                         <option value="1">1</option>
@@ -25,8 +28,10 @@ class Utilities extends Component {
                         <option value="5">5</option>
                     </select>
                 </div>
-                <div>
-                    <h2>Heating Choices:</h2>
+                <div className="utilities-question2">
+                    <h2 className="utilities-question2-header">
+                        Heating Choices:
+                    </h2>
                     <select onChange={this.setChoice}>
                         <option />
                         <option value="Electricity">Electricity</option>

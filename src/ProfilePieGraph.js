@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Bar } from "react-chartjs-2";
-class BarGraph extends Component {
+import { Pie } from "react-chartjs-2";
+class ProfilePieGraph extends Component {
     render() {
         var utilitiesYearly = this.props.utilities.year;
         var carYearly = this.props.car.year;
@@ -56,7 +56,7 @@ class BarGraph extends Component {
         var chartOptions = {
             scales: { yAxes: [{ ticks: { beginAtZero: true } }] }
         };
-        return <Bar data={chartData} options={chartOptions} />;
+        return <Pie data={chartData} options={chartOptions} />;
     }
 }
-export default BarGraph;
+export default ProfilePieGraph;

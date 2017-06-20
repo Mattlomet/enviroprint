@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Food.css";
 
 class Food extends Component {
     constructor(props) {
@@ -8,8 +9,8 @@ class Food extends Component {
     render() {
         return (
             <div className="food-component">
-                <div className="header">
-                    <h2 className="header-text">How do you eat?</h2>
+                <div className="food-header">
+                    <h2 className="food-header-text">How do you eat?</h2>
                 </div>
                 <div className="select">
                     <select onChange={this.foodData}>

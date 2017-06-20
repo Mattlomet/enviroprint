@@ -28,7 +28,7 @@ class DoughnutGraph extends Component {
                         "rgba(75, 192, 192, 0.2)",
                         "rgba(153, 102, 255, 0.2)",
                         "rgba(255, 159, 64, 0.2)",
-                        "rgba(92, 34, 64, 0.2)"
+                        "rgba(255, 0, 132, 0.2)"
                     ],
                     data: [
                         utilitiesYearly,

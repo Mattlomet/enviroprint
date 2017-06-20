@@ -1,7 +1,10 @@
 .app-component{
     text-align: center;
 }
-.app-header{}
+.app-header{
+    color: rgba(255, 107, 0, 1);
+    font-family: 'Amatic SC', cursive;
+}
 .input-component{}
 .graph-containers{
     display: flex;
@@ -11,12 +14,20 @@
 .bar-graph{
     width: 40vw;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 .doughnut-graph{
     width: 40vw;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 .line-graph{
     width: 100vw;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7);
 }
+.Nav-bar{}
+.unordered-list{}
+.listitem{}
+.profile-container{}
+.profile-component{}

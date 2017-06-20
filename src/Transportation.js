@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./Transportation.css";
 class Transportation extends Component {
     constructor(props) {
         super(props);
@@ -11,20 +11,22 @@ class Transportation extends Component {
     }
     render() {
         return (
-            <div>
-                <h2>How much gas do you use a week?</h2>
+            <div className="transportation-div">
+                <h2 className="gas-header">How much gas do you use a week?</h2>
                 <label><input onChange={this.setGas} />/gals</label>
-                <h2>How many miles do you use per month with the follow:</h2>
-                <label>
+                <h2 className="miles-header">
+                    How many miles do you use per month with the follow:
+                </h2>
+                <label className="plane-label">
                     Plane:<input onChange={this.setPlane} />
                 </label>
-                <label>
+                <label className="train-label">
                     Train:<input onChange={this.setTrain} />
                 </label>
-                <label>
+                <label className="subway-label">
                     Subway:<input onChange={this.setSubway} />
                 </label>
-                <label>
+                <label className="bus-label">
                     Bus:<input onChange={this.setBus} />
                 </label>
             </div>

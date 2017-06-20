@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Utilities from "./Utilities";
 import Food from "./Food";
 import Transportation from "./Transportation";
+import "./InputCategory.css";
 
 class InputCategory extends Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class InputCategory extends Component {
             Input = <Food food={this.props.food} />;
         }
         return (
-            <div>
+            <div className="InputCategory-div">
                 <div className="Sections">
                     <div
                         className="Utilities"

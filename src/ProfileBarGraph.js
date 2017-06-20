@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Bar } from "react-chartjs-2";
-class BarGraph extends Component {
+class ProfileBarGraph extends Component {
     render() {
         var utilitiesYearly = this.props.utilities.year;
         var carYearly = this.props.car.year;
@@ -59,4 +59,4 @@ class BarGraph extends Component {
         return <Bar data={chartData} options={chartOptions} />;
     }
 }
-export default BarGraph;
+export default ProfileBarGraph;

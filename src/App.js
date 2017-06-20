@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Profile from "./Profile";
+import SignIn from "./SignIn";
 import InputCategory from "./InputCategory";
 import BarGraph from "./BarGraph";
 import DoughnutGraph from "./DoughnutGraph";
@@ -9,6 +11,9 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
+            LogIn: false,
+            user_id: 0,
+            page: "",
             utilities: [],
             car: [],
             plane: [],
@@ -24,47 +29,108 @@ class App extends Component {
         this.setTrain = this.setTrain.bind(this);
         this.setSubway = this.setSubway.bind(this);
         this.setBus = this.setBus.bind(this);
+        this.setLogIn = this.setLogIn.bind(this);
+        this.switchPageHome = this.switchPageHome.bind(this);
+        this.switchPageProfile = this.switchPageProfile.bind(this);
     }
     render() {
-        return (
-            <div className="app-compenent">
-                <h1 className="app-header">Environmental Footprint</h1>
-                <div className="input-component">
-                    <InputCategory
-                        utilities={this.setUtilities}
-                        car={this.setCar}
-                        plane={this.setPlane}
-                        train={this.setTrain}
-                        subway={this.setSubway}
-                        bus={this.setBus}
-                        food={this.setFood}
-                    />
+        if (this.state.LogIn === false) {
+            return (
+                <div>
+                    <h1 className="app-header">Environmental Footprint</h1>
+                    <SignIn logInFunction={this.setLogIn} />
                 </div>
-                <div className="graph-containers">
-                    <div className="bar-graph">
-                        <BarGraph
-                            utilities={this.state.utilities}
-                            car={this.state.car}
-                            plane={this.state.plane}
-                            train={this.state.train}
-                            subway={this.state.subway}
-                            bus={this.state.bus}
-                            food={this.state.food}
+            );
+        } else if (this.state.page === "") {
+            return (
+                <div className="app-compenent">
+                    <div className="Nav-bar">
+                        <ul className="unordered-list">
+                            <li
+                                className="listitem"
+                                onClick={this.switchPageProfile}
+                            >
+                                Profile
+                            </li>
+                            <li
+                                className="listitem"
+                                onClick={this.switchPageHome}
+                            >
+                                Home
+                            </li>
+                        </ul>
+                    </div>
+                    <h1 className="app-header">Environmental Footprint</h1>
+                    <div className="input-component">
+                        <InputCategory
+                            utilities={this.setUtilities}
+                            car={this.setCar}
+                            plane={this.setPlane}
+                            train={this.setTrain}
+                            subway={this.setSubway}
+                            bus={this.setBus}
+                            food={this.setFood}
                         />
                     </div>
-                    <div className="doughnut-graph">
-                        <DoughnutGraph
-                            utilities={this.state.utilities}
-                            car={this.state.car}
-                            plane={this.state.plane}
-                            train={this.state.train}
-                            subway={this.state.subway}
-                            bus={this.state.bus}
-                            food={this.state.food}
-                        />
+                    <div className="graph-containers">
+                        <div className="bar-graph">
+                            <BarGraph
+                                utilities={this.state.utilities}
+                                car={this.state.car}
+                                plane={this.state.plane}
+                                train={this.state.train}
+                                subway={this.state.subway}
+                                bus={this.state.bus}
+                                food={this.state.food}
+                            />
+                        </div>
+                        <div className="doughnut-graph">
+                            <DoughnutGraph
+                                utilities={this.state.utilities}
+                                car={this.state.car}
+                                plane={this.state.plane}
+                                train={this.state.train}
+                                subway={this.state.subway}
+                                bus={this.state.bus}
+                                food={this.state.food}
+                            />
+                        </div>
+                        <div className="line-graph">
+                            <LineGraph
+                                utilities={this.state.utilities}
+                                car={this.state.car}
+                                plane={this.state.plane}
+                                train={this.state.train}
+                                subway={this.state.subway}
+                                bus={this.state.bus}
+                                food={this.state.food}
+                            />
+                        </div>
                     </div>
-                    <div className="line-graph">
-                        <LineGraph
+                </div>
+            );
+        } else if (this.state.page === "profile") {
+            return (
+                <div className="profile-container">
+                    <div className="Nav-bar">
+                        <ul className="unordered-list">
+                            <li
+                                className="listitem"
+                                onClick={this.switchPageProfile}
+                            >
+                                Profile
+                            </li>
+                            <li
+                                className="listitem"
+                                onClick={this.switchPageHome}
+                            >
+                                Home
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="profile-component">
+                        <Profile
+                            userid={this.state.user_id}
                             utilities={this.state.utilities}
                             car={this.state.car}
                             plane={this.state.plane}
@@ -75,9 +141,18 @@ class App extends Component {
                         />
                     </div>
                 </div>
-
-            </div>
-        );
+            );
+        }
+    }
+    switchPageHome() {
+        this.setState({ page: "" });
+    }
+    switchPageProfile() {
+        this.setState({ page: "profile" });
+    }
+    setLogIn(passedLogin, userid) {
+        this.setState({ LogIn: passedLogin });
+        this.setState({ user_id: userid });
     }
     setUtilities(day, month, year) {
         var utilLog = {
