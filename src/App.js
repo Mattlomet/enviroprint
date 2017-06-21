@@ -9,6 +9,7 @@ import "./App.css";
 import tree from "./tree-logos.png";
 import home from "./house.png";
 import account from "./account.png";
+import save from "./save-icon.png";
 
 class App extends Component {
     constructor() {
@@ -35,6 +36,7 @@ class App extends Component {
         this.setLogIn = this.setLogIn.bind(this);
         this.switchPageHome = this.switchPageHome.bind(this);
         this.switchPageProfile = this.switchPageProfile.bind(this);
+        this.saveMenu = this.saveMenu.bind(this);
     }
     render() {
         if (this.state.LogIn === false) {
@@ -154,6 +156,14 @@ class App extends Component {
                                         alt="home"
                                     />
                                 </li>
+                                <li className="listitem">
+                                    <img
+                                        className="save-image"
+                                        src={save}
+                                        alt="save"
+                                        onClick={this.saveMenu}
+                                    />
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -172,6 +182,10 @@ class App extends Component {
                 </div>
             );
         }
+    }
+    saveMenu() {
+        var sideBar = document.getElementsByClassName("username-header-bar")[0];
+        sideBar.style.display = "Block";
     }
     switchPageHome() {
         this.setState({ page: "" });

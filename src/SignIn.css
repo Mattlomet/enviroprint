@@ -1,12 +1,10 @@
 .SignIn-tree{
     position: absolute;
     z-index:-1;
-    height: 100vw;
+    height: 75vw;
     width: 100vw;
     top: -10vw;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    left: -2vw;
     opacity: .5;
 }
 .SignIn-main{

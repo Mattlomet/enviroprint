@@ -115,7 +115,7 @@ class LineGraph extends Component {
                     ]
                 },
                 {
-                    label: "Sweden Average",
+                    label: "Swedish Average",
                     backgroundColor: ["rgba(0, 10, 255, 0.64)"],
                     data: [
                         swedenJan,

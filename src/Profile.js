@@ -19,44 +19,78 @@ class Profile extends Component {
         };
         this.saveData = this.saveData.bind(this);
         this.runMount = this.runMount.bind(this);
+        this.hideSaveMenu = this.hideSaveMenu.bind(this);
     }
     render() {
         var userName = this.state.username;
         return (
             <div className="profile">
-                <h2 className="username-header">@{userName}'s Page</h2>
-                <div>
-                    <h3 className="save-your-data">
-                        Save Your Data From The Day
-                    </h3>
-                    <div className="button" onClick={this.saveData}>save</div>
-                </div>
-                <div className="profile-graphs">
-                    <div className="profile-bar-graph">
-                        <ProfileBarGraph
-                            utilities={this.state.utilities}
-                            car={this.state.car}
-                            plane={this.state.plane}
-                            train={this.state.train}
-                            subway={this.state.subway}
-                            bus={this.state.bus}
-                            food={this.state.food}
-                        />
+                <div
+                    className="username-header-bar"
+                    onMouseLeave={this.hideSaveMenu}
+                >
+                    <div>
+                        <h3 className="save-your-data">
+                            Save Your Data From The Day
+                        </h3>
+                        <div className="buttonprofile" onClick={this.saveData}>
+                            save
+                        </div>
                     </div>
-                    <div className="profile-pie-graph">
-                        <ProfilePieGraph
-                            utilities={this.state.utilities}
-                            car={this.state.car}
-                            plane={this.state.plane}
-                            train={this.state.train}
-                            subway={this.state.subway}
-                            bus={this.state.bus}
-                            food={this.state.food}
-                        />
+                </div>
+                <div className="margin-top">
+
+                    <h2 className="username-header">@{userName}'s Page</h2>
+                    <div className="profile-graphs">
+                        <div className="profile-bar-graph-over">
+                            <h4>Saved Data</h4>
+                            <div className="profile-bar-graph">
+                                <ProfileBarGraph
+                                    utilities={this.state.utilities}
+                                    car={this.state.car}
+                                    plane={this.state.plane}
+                                    train={this.state.train}
+                                    subway={this.state.subway}
+                                    bus={this.state.bus}
+                                    food={this.state.food}
+                                />
+                            </div>
+
+                        </div>
+                        <div className="profile-bar-graph-over">
+                            <h4>Current Data</h4>
+                            <div className="profile-bar-graph">
+                                <ProfileBarGraph
+                                    utilities={this.props.utilities}
+                                    car={this.props.car}
+                                    plane={this.props.plane}
+                                    train={this.props.train}
+                                    subway={this.props.subway}
+                                    bus={this.props.bus}
+                                    food={this.props.food}
+                                />
+                            </div>
+                        </div>
+                        <div className="profile-pie-graph">
+                            <ProfilePieGraph
+                                utilities={this.state.utilities}
+                                car={this.state.car}
+                                plane={this.state.plane}
+                                train={this.state.train}
+                                subway={this.state.subway}
+                                bus={this.state.bus}
+                                food={this.state.food}
+                            />
+                            <h4>Saved Data</h4>
+                        </div>
                     </div>
                 </div>
             </div>
         );
+    }
+    hideSaveMenu() {
+        var sideBar = document.getElementsByClassName("username-header-bar")[0];
+        sideBar.style.display = "none";
     }
     saveData() {
         var doctor = this;

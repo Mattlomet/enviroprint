@@ -16,15 +16,22 @@
     height: 6vw;
     margin-right: 1vw;
 }
+.save-image{
+    display: inline;
+    width: 4vw;
+    height: 4vw;
+    margin-right: 1vw;
+}
 .home-image{
     margin-left: 1vw;
     margin-top: 1vw;
     display: inline;
     width: 4vw;
     height: 4vw;
+    margin-right: 2vw;
 }
 .account-image{
-    margin-left: 1vw;
+    margin-left: -5vw;
     margin-top: 1vw;
     display: inline;
     width: 4vw;
@@ -53,7 +60,8 @@
 .input-component{
     margin-top: 8vw;
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 2vw;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
     margin-bottom: 2vw;
     border: 3px solid white;
 }
@@ -89,4 +97,6 @@
     margin: 0 auto;
 }
 .profile-container{}
-.profile-component{}
+.profile-component{
+
+}

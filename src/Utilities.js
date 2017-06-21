@@ -16,10 +16,10 @@ class Utilities extends Component {
         return (
             <div className="utilities-div">
                 <div className="utilities-question1">
-                    <h2 className="utilities-question1-header">
+                    <div className="utilities-question1-header">
                         How many people live in your house?
-                    </h2>
-                    <select onChange={this.setResidence}>
+                    </div>
+                    <select onChange={this.setResidence} className="select">
                         <option />
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -29,10 +29,10 @@ class Utilities extends Component {
                     </select>
                 </div>
                 <div className="utilities-question2">
-                    <h2 className="utilities-question2-header">
+                    <div className="utilities-question2-header">
                         Heating Choices:
-                    </h2>
-                    <select onChange={this.setChoice}>
+                    </div>
+                    <select onChange={this.setChoice} className="selectGas">
                         <option />
                         <option value="Electricity">Electricity</option>
                         <option value="Natural Gas">Natural Gas</option>
