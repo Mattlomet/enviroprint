@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./SignIn.css";
+import tree from "./signin-tree.png";
+
 class SignIn extends Component {
     constructor(props) {
         super(props);
@@ -15,34 +17,37 @@ class SignIn extends Component {
     }
     render() {
         return (
-            <div className="SignIn-main">
-                <h2 className="signin-header2">Please Sign In</h2>
-                <input
-                    className="input"
-                    onChange={this.setUserName}
-                    placeholder="username"
-                />
-                <input
-                    className="input"
-                    onChange={this.setPassword}
-                    placeholder="password"
-                />
-                <div className="button" onClick={this.logIn}>
-                    Log In
-                </div>
-                <h2 className="signin-header2"> Or Create Account </h2>
-                <input
-                    className="input"
-                    onChange={this.setUserName}
-                    placeholder="username"
-                />
-                <input
-                    className="input"
-                    onChange={this.setPassword}
-                    placeholder="password"
-                />
-                <div className="button" onClick={this.createAccount}>
-                    Create Account
+            <div>
+                <img src={tree} alt="tree" className="SignIn-tree" />
+                <div className="SignIn-main">
+                    <h2 className="signin-header2">Please Sign In</h2>
+                    <input
+                        className="input"
+                        onChange={this.setUserName}
+                        placeholder="username"
+                    />
+                    <input
+                        className="input"
+                        onChange={this.setPassword}
+                        placeholder="password"
+                    />
+                    <div className="button" onClick={this.logIn}>
+                        Log In
+                    </div>
+                    <h2 className="signin-header2"> Or Create Account </h2>
+                    <input
+                        className="input"
+                        onChange={this.setUserName}
+                        placeholder="username"
+                    />
+                    <input
+                        className="input"
+                        onChange={this.setPassword}
+                        placeholder="password"
+                    />
+                    <div className="button" onClick={this.createAccount}>
+                        Create Account
+                    </div>
                 </div>
             </div>
         );

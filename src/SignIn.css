@@ -1,4 +1,42 @@
-.SignIn-main{}
-.signin-header2{}
-.button{}
-.input{}
+.SignIn-tree{
+    position: absolute;
+    z-index:-1;
+    height: 100vw;
+    width: 100vw;
+    top: -10vw;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .5;
+}
+.SignIn-main{
+    background-color: rgb(255, 255, 255);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: inline-block;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.signin-header2{
+    font-size: 3vw;
+    color: rgba(255, 107, 0, 1);
+    font-family: 'Patrick Hand SC', cursive;
+}
+.button{
+    font-size: 1vw;
+    color: black;
+    border: 2px solid black;
+    font-family: 'Bubbler One', sans-serif;
+    background-color: rgb(201, 201, 201);
+}
+.input{
+    width: 11vw;
+    margin-bottom: 5px;
+}
+.app-header-sign-in{
+    font-size: 4vw;
+    color: rgba(255, 107, 0, 1);
+    font-family: 'Amatic SC', cursive;
+}

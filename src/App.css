@@ -1,33 +1,92 @@
 .app-component{
     text-align: center;
 }
+.top-bar{
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    display: block;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 7vw;
+}
+.tree-image{
+    display: inline;
+    width: 6vw;
+    height: 6vw;
+    margin-right: 1vw;
+}
+.home-image{
+    margin-left: 1vw;
+    margin-top: 1vw;
+    display: inline;
+    width: 4vw;
+    height: 4vw;
+}
+.account-image{
+    margin-left: 1vw;
+    margin-top: 1vw;
+    display: inline;
+    width: 4vw;
+    height: 4vw;
+}
+.Nav-bar{
+    display: inline
+}
+.unordered-list{
+    display: inline;
+    list-style: none;
+}
+.listitem{
+    font-size: 1vw;
+    font-family: 'Bubbler One', sans-serif;
+    display: inline;
+}
 .app-header{
+    position: left;
+    display: inline;
+    font-size: 4vw;
     color: rgba(255, 107, 0, 1);
     font-family: 'Amatic SC', cursive;
+    margin-right: 45vw;
 }
-.input-component{}
+.input-component{
+    margin-top: 8vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2vw;
+    margin-bottom: 2vw;
+    border: 3px solid white;
+}
 .graph-containers{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 .bar-graph{
-    width: 40vw;
+    height: 25vw;
+    width: 48vw;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255,1);
+    margin-bottom: 2vw;
 }
 .doughnut-graph{
-    width: 40vw;
+    height: 25vw;
+    width: 48vw;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255,1);
+    margin-bottom: 2vw;
+
 }
 .line-graph{
-    width: 100vw;
+    width: 95vw;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255,1);
 }
-.Nav-bar{}
-.unordered-list{}
-.listitem{}
+.pick-an-input{
+    color: rgba(255, 107, 0, 1);
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 3vw;
+    margin: 0 auto;
+}
 .profile-container{}
 .profile-component{}

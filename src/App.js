@@ -6,6 +6,9 @@ import BarGraph from "./BarGraph";
 import DoughnutGraph from "./DoughnutGraph";
 import LineGraph from "./LineGraph";
 import "./App.css";
+import tree from "./tree-logos.png";
+import home from "./house.png";
+import account from "./account.png";
 
 class App extends Component {
     constructor() {
@@ -37,31 +40,45 @@ class App extends Component {
         if (this.state.LogIn === false) {
             return (
                 <div>
-                    <h1 className="app-header">Environmental Footprint</h1>
+                    <h1 className="app-header-sign-in">
+                        Environmental Footprint
+                    </h1>
                     <SignIn logInFunction={this.setLogIn} />
                 </div>
             );
         } else if (this.state.page === "") {
             return (
                 <div className="app-compenent">
-                    <div className="Nav-bar">
-                        <ul className="unordered-list">
-                            <li
-                                className="listitem"
-                                onClick={this.switchPageProfile}
-                            >
-                                Profile
-                            </li>
-                            <li
-                                className="listitem"
-                                onClick={this.switchPageHome}
-                            >
-                                Home
-                            </li>
-                        </ul>
+                    <div className="top-bar">
+                        <img className="tree-image" src={tree} alt="tree" />
+                        <h1 className="app-header">Environmental Footprint</h1>
+                        <div className="Nav-bar">
+                            <ul className="unordered-list">
+                                <li
+                                    className="listitem"
+                                    onClick={this.switchPageProfile}
+                                >
+                                    <img
+                                        className="account-image"
+                                        src={account}
+                                        alt="account"
+                                    />
+                                </li>
+                                <li
+                                    className="listitem"
+                                    onClick={this.switchPageHome}
+                                >
+                                    <img
+                                        className="home-image"
+                                        src={home}
+                                        alt="home"
+                                    />
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <h1 className="app-header">Environmental Footprint</h1>
                     <div className="input-component">
+                        <h2 className="pick-an-input">Please pick one</h2>
                         <InputCategory
                             utilities={this.setUtilities}
                             car={this.setCar}
@@ -112,21 +129,33 @@ class App extends Component {
         } else if (this.state.page === "profile") {
             return (
                 <div className="profile-container">
-                    <div className="Nav-bar">
-                        <ul className="unordered-list">
-                            <li
-                                className="listitem"
-                                onClick={this.switchPageProfile}
-                            >
-                                Profile
-                            </li>
-                            <li
-                                className="listitem"
-                                onClick={this.switchPageHome}
-                            >
-                                Home
-                            </li>
-                        </ul>
+                    <div className="top-bar">
+                        <img className="tree-image" src={tree} alt="tree" />
+                        <h1 className="app-header">Environmental Footprint</h1>
+                        <div className="Nav-bar">
+                            <ul className="unordered-list">
+                                <li
+                                    className="listitem"
+                                    onClick={this.switchPageProfile}
+                                >
+                                    <img
+                                        className="account-image"
+                                        src={account}
+                                        alt="account"
+                                    />
+                                </li>
+                                <li
+                                    className="listitem"
+                                    onClick={this.switchPageHome}
+                                >
+                                    <img
+                                        className="home-image"
+                                        src={home}
+                                        alt="home"
+                                    />
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div className="profile-component">
                         <Profile

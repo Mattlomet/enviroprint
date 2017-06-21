@@ -1,6 +1,25 @@
 .InputCategory-div{}
 .Sections{}
-.Utilities{}
-.Transportation{}
-.Food{}
-.Inputs{}
+.Utilities{
+    color: rgba(255, 107, 0, 1);
+    font-family: 'Bubbler One', sans-serif;
+    font-size: 1vw;
+}
+.Transportation{
+    color: rgba(255, 107, 0, 1);
+    font-family: 'Bubbler One', sans-serif;
+    font-size: 1vw;
+
+}
+.Food{
+    color: rgba(255, 107, 0, 1);
+    font-family: 'Bubbler One', sans-serif;
+    font-size: 1vw;
+
+}
+.Inputs{
+    color: rgba(255, 107, 0, 1);
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 1vw;
+    margin: 0 auto;
+}
