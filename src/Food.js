@@ -10,10 +10,10 @@ class Food extends Component {
         return (
             <div className="food-component">
                 <div className="food-header">
-                    <h2 className="food-header-text">How do you eat?</h2>
+                    <div className="food-header-text">How do you eat?</div>
                 </div>
                 <div className="select">
-                    <select onChange={this.foodData}>
+                    <select onChange={this.foodData} className="selectFood">
                         <option value="0.0" />
                         <option value="16.0">
                             Heavy Meat Eater - 100 grams/day

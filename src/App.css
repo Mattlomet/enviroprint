@@ -9,6 +9,7 @@
     top: 0;
     left: 0;
     height: 7vw;
+    box-shadow: 0px 2px 20px 0px black;
 }
 .tree-image{
     display: inline;
@@ -17,6 +18,12 @@
     margin-right: 1vw;
 }
 .save-image{
+    display: inline;
+    width: 4vw;
+    height: 4vw;
+    margin-right: 1vw;
+}
+.search-image{
     display: inline;
     width: 4vw;
     height: 4vw;
@@ -50,7 +57,6 @@
     display: inline;
 }
 .app-header{
-    position: left;
     display: inline;
     font-size: 4vw;
     color: rgba(255, 107, 0, 1);
@@ -61,9 +67,10 @@
     margin-top: 8vw;
     background-color: rgba(255, 255, 255, 0.5);
     padding-bottom: 1vw;
-    padding-top: 1vw;
-    margin-bottom: 2vw;
+    padding-top: .5vw;
+    margin-bottom: 1vw;
     border: 3px solid white;
+    box-shadow: 0px 4px 10px 0px black;
 }
 .graph-containers{
     display: flex;
@@ -76,6 +83,7 @@
     margin: 0 auto;
     background-color: rgba(255, 255, 255,1);
     margin-bottom: 2vw;
+    box-shadow: 0px 4px 10px 0px black;
 }
 .doughnut-graph{
     height: 25vw;
@@ -83,17 +91,20 @@
     margin: 0 auto;
     background-color: rgba(255, 255, 255,1);
     margin-bottom: 2vw;
+    box-shadow: 0px 4px 10px 0px black;
 
 }
 .line-graph{
-    width: 95vw;
+    height: 40vw;
+    width: 75vw;
     margin: 0 auto;
     background-color: rgba(255, 255, 255,1);
+    box-shadow: 0px 1px 5px 0px black;
 }
 .pick-an-input{
     color: rgba(255, 107, 0, 1);
     font-family: 'Patrick Hand SC', cursive;
-    font-size: 3vw;
+    font-size: 2vw;
     margin: 0 auto;
 }
 .profile-container{}

@@ -16,6 +16,8 @@
     padding-bottom: 3vw;
     padding-left: 1vw;
     padding-right: 1vw;
+    box-shadow: 0px 1px 5px 0px black;
+    margin-top: 5vw;
 }
 .signin-header2{
     font-size: 3vw;
@@ -30,6 +32,8 @@
     background-color: rgb(201, 201, 201);
 }
 .input{
+    height: 2vw;
+    font-size: 1vw;
     width: 11vw;
     margin-bottom: 5px;
 }
@@ -37,4 +41,6 @@
     font-size: 4vw;
     color: rgba(255, 107, 0, 1);
     font-family: 'Amatic SC', cursive;
+    border-bottom: 2px solid  rgba(255, 107, 0, 1);
+    display: inline;
 }

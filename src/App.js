@@ -5,11 +5,13 @@ import InputCategory from "./InputCategory";
 import BarGraph from "./BarGraph";
 import DoughnutGraph from "./DoughnutGraph";
 import LineGraph from "./LineGraph";
+import Search from "./Search";
 import "./App.css";
 import tree from "./tree-logos.png";
 import home from "./house.png";
 import account from "./account.png";
 import save from "./save-icon.png";
+import search from "./search.png";
 
 class App extends Component {
     constructor() {
@@ -36,6 +38,7 @@ class App extends Component {
         this.setLogIn = this.setLogIn.bind(this);
         this.switchPageHome = this.switchPageHome.bind(this);
         this.switchPageProfile = this.switchPageProfile.bind(this);
+        this.switchPageSearch = this.switchPageSearch.bind(this);
         this.saveMenu = this.saveMenu.bind(this);
     }
     render() {
@@ -43,7 +46,7 @@ class App extends Component {
             return (
                 <div>
                     <h1 className="app-header-sign-in">
-                        Environmental Footprint
+                        Carbon Print
                     </h1>
                     <SignIn logInFunction={this.setLogIn} />
                 </div>
@@ -53,7 +56,7 @@ class App extends Component {
                 <div className="app-compenent">
                     <div className="top-bar">
                         <img className="tree-image" src={tree} alt="tree" />
-                        <h1 className="app-header">Environmental Footprint</h1>
+                        <h1 className="app-header">Carbon Print</h1>
                         <div className="Nav-bar">
                             <ul className="unordered-list">
                                 <li
@@ -74,6 +77,16 @@ class App extends Component {
                                         className="home-image"
                                         src={home}
                                         alt="home"
+                                    />
+                                </li>
+                                <li
+                                    className="listitem"
+                                    onClick={this.switchPageSearch}
+                                >
+                                    <img
+                                        className="search-image"
+                                        src={search}
+                                        alt="search"
                                     />
                                 </li>
                             </ul>
@@ -133,7 +146,7 @@ class App extends Component {
                 <div className="profile-container">
                     <div className="top-bar">
                         <img className="tree-image" src={tree} alt="tree" />
-                        <h1 className="app-header">Environmental Footprint</h1>
+                        <h1 className="app-header">Carbon Print</h1>
                         <div className="Nav-bar">
                             <ul className="unordered-list">
                                 <li
@@ -181,6 +194,42 @@ class App extends Component {
                     </div>
                 </div>
             );
+        } else if (this.state.page === "search") {
+            return (
+                <div className="search-container">
+                    <div className="top-bar">
+                        <img className="tree-image" src={tree} alt="tree" />
+                        <h1 className="app-header">Carbon Print</h1>
+                        <div className="Nav-bar">
+                            <ul className="unordered-list">
+                                <li
+                                    className="listitem"
+                                    onClick={this.switchPageProfile}
+                                >
+                                    <img
+                                        className="account-image"
+                                        src={account}
+                                        alt="account"
+                                    />
+                                </li>
+                                <li
+                                    className="listitem"
+                                    onClick={this.switchPageHome}
+                                >
+                                    <img
+                                        className="home-image"
+                                        src={home}
+                                        alt="home"
+                                    />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="search-component">
+                        <Search />
+                    </div>
+                </div>
+            );
         }
     }
     saveMenu() {
@@ -192,6 +241,9 @@ class App extends Component {
     }
     switchPageProfile() {
         this.setState({ page: "profile" });
+    }
+    switchPageSearch() {
+        this.setState({ page: "search" });
     }
     setLogIn(passedLogin, userid) {
         this.setState({ LogIn: passedLogin });

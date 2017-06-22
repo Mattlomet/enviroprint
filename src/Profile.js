@@ -25,21 +25,24 @@ class Profile extends Component {
         var userName = this.state.username;
         return (
             <div className="profile">
-                <div
-                    className="username-header-bar"
-                    onMouseLeave={this.hideSaveMenu}
-                >
-                    <div>
-                        <h3 className="save-your-data">
-                            Save Your Data From The Day
-                        </h3>
-                        <div className="buttonprofile" onClick={this.saveData}>
-                            save
-                        </div>
-                    </div>
-                </div>
                 <div className="margin-top">
 
+                    <div
+                        className="username-header-bar"
+                        onMouseLeave={this.hideSaveMenu}
+                    >
+                        <div>
+                            <h3 className="save-your-data">
+                                Save Your Data From The Day
+                            </h3>
+                            <div
+                                className="buttonprofile"
+                                onClick={this.saveData}
+                            >
+                                save
+                            </div>
+                        </div>
+                    </div>
                     <h2 className="username-header">@{userName}'s Page</h2>
                     <div className="profile-graphs">
                         <div className="profile-bar-graph-over">
@@ -91,6 +94,29 @@ class Profile extends Component {
     hideSaveMenu() {
         var sideBar = document.getElementsByClassName("username-header-bar")[0];
         sideBar.style.display = "none";
+    }
+    runMount() {
+        this.componentWillMount();
+    }
+    componentWillMount() {
+        var userid = this.props.userid;
+        axios
+            .get("/utilities/show", {
+                params: {
+                    user_id: userid
+                }
+            })
+            .then(
+                function(response) {
+                    this.setState({ utilities: response.data.utilities || {} });
+                    this.setState({ car: response.data.car || {} });
+                    this.setState({ bus: response.data.bus || {} });
+                    this.setState({ plane: response.data.plane || {} });
+                    this.setState({ subway: response.data.subway || {} });
+                    this.setState({ food: response.data.food || {} });
+                    this.setState({ train: response.data.train || {} });
+                }.bind(this)
+            );
     }
     saveData() {
         var doctor = this;
@@ -205,29 +231,6 @@ class Profile extends Component {
                             });
                     });
             });
-    }
-    runMount() {
-        this.componentWillMount();
-    }
-    componentWillMount() {
-        var userid = this.props.userid;
-        axios
-            .get("/utilities/show", {
-                params: {
-                    user_id: userid
-                }
-            })
-            .then(
-                function(response) {
-                    this.setState({ utilities: response.data.utilities });
-                    this.setState({ car: response.data.car });
-                    this.setState({ bus: response.data.bus });
-                    this.setState({ plane: response.data.plane });
-                    this.setState({ subway: response.data.subway });
-                    this.setState({ food: response.data.food });
-                    this.setState({ train: response.data.train });
-                }.bind(this)
-            );
     }
     componentDidMount() {
         var userid = this.props.userid;

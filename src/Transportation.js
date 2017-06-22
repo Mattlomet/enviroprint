@@ -12,11 +12,13 @@ class Transportation extends Component {
     render() {
         return (
             <div className="transportation-div">
-                <h2 className="gas-header">How much gas do you use a week?</h2>
+                <div className="gas-header">
+                    How much gas do you use a week?
+                </div>
                 <label><input onChange={this.setGas} />/gals</label>
-                <h2 className="miles-header">
+                <div className="miles-header">
                     How many miles do you use per month with the follow:
-                </h2>
+                </div>
                 <label className="plane-label">
                     Plane:<input onChange={this.setPlane} />
                 </label>

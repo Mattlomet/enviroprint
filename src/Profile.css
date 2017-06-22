@@ -12,10 +12,8 @@
     margin-bottom: 2vw;
     border: 3px solid white;
     display: none;
-    top: 7vw;
+    top: 20vw;
     right: 0vw;
-    z-index: 1;
-    position: absolute;
     padding: 1vw;
 }
 .margin-top{

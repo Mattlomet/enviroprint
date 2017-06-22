@@ -1,7 +1,9 @@
 .transportation-div{}
-.gas-header{}
-.miles-header{}
-.plane-header{}
-.train-header{}
-.subway-header{}
-.bus-header{}
+.gas-header{
+    font-size: 3vw;
+    margin: 0 auto;
+}
+.miles-header{
+    font-size: 3vw;
+    margin: 0 auto;
+}

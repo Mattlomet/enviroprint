@@ -3,12 +3,12 @@ import { Bar } from "react-chartjs-2";
 class ProfileBarGraph extends Component {
     render() {
         var utilitiesYearly = this.props.utilities.year;
-        var carYearly = this.props.car.year;
-        var planeYearly = this.props.plane.year;
-        var trainYearly = this.props.train.year;
-        var subwayYearly = this.props.subway.year;
-        var busYearly = this.props.bus.year;
-        var foodYearly = this.props.food.year;
+        var carYearly = this.props.car.year || 0;
+        var planeYearly = this.props.plane.year || 0;
+        var trainYearly = this.props.train.year || 0;
+        var subwayYearly = this.props.subway.year || 0;
+        var busYearly = this.props.bus.year || 0;
+        var foodYearly = this.props.food.year || 0;
         var chartData = {
             labels: [
                 "Utilities",

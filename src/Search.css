@@ -1,0 +1,31 @@
+.search-page{
+    margin-top: 10vw;
+}
+.search-input-container{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.search-header{
+    font-size: 4vw;
+    color: rgba(255, 107, 0, 1);
+    font-family: 'Patrick Hand SC', cursive;
+}
+.search-input{
+    width: 10vw;
+    height: 3vw;
+    font-size: 2vw;
+    display: inline;
+    color: rgba(255, 107, 0, 1);
+}
+.search-button{
+    display: inline;
+    height: 3vw;
+    width: 3vw;
+    margin-left: 1vw;
+}
+.search-results{
+    margin-top: 3vw;
+}
+.searchGraph{
+    background-color: white;
+}
