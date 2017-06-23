@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import ProfileBarGraph from "./ProfileBarGraph";
 import ProfilePieGraph from "./ProfilePieGraph";
-import "./Profile.css";
+import "../Stylesheets/Profile.css";
 
 class Profile extends Component {
     constructor() {

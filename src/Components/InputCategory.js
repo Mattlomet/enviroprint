@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Utilities from "./Utilities";
 import Food from "./Food";
 import Transportation from "./Transportation";
-import "./InputCategory.css";
+import "../Stylesheets/InputCategory.css";
 
 class InputCategory extends Component {
     constructor(props) {

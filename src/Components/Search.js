@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./Search.css";
-import search from "./search.png";
+import "../Stylesheets/Search.css";
+import search from "../search.png";
 import axios from "axios";
 import SearchProfileBar from "./SearchProfileBar";
 class Search extends Component {

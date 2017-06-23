@@ -6,12 +6,12 @@ import BarGraph from "./BarGraph";
 import DoughnutGraph from "./DoughnutGraph";
 import LineGraph from "./LineGraph";
 import Search from "./Search";
-import "./App.css";
-import tree from "./tree-logos.png";
-import home from "./house.png";
-import account from "./account.png";
-import save from "./save-icon.png";
-import search from "./search.png";
+import "../Stylesheets/App.css";
+import tree from "../tree-logos.png";
+import home from "../house.png";
+import account from "../account.png";
+import save from "../save-icon.png";
+import search from "../search.png";
 
 class App extends Component {
     constructor() {

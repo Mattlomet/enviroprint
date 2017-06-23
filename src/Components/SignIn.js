@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import "./SignIn.css";
-import tree from "./signin-tree.png";
+import "../Stylesheets/SignIn.css";
+import tree from "../signin-tree.png";
 
 class SignIn extends Component {
     constructor(props) {

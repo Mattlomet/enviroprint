@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Utilities.css";
+import "../Stylesheets/Utilities.css";
 
 class Utilities extends Component {
     constructor(props) {
