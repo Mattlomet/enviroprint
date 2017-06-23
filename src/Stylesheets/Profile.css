@@ -17,7 +17,7 @@
     padding: 1vw;
 }
 .margin-top{
-    margin-top: 10vw;
+    margin-top: 7vw;
 }
 .username-header{
     font-size: 5vw;
@@ -43,6 +43,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: rgba(200, 200, 200, 0.3);
 }
 .profile-bar-graph-over{
     height: 25vw;

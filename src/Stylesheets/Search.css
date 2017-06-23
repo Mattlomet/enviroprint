@@ -9,6 +9,7 @@
     font-size: 3vw;
     color: rgba(255, 107, 0, 1);
     font-family: 'Patrick Hand SC', cursive;
+    margin-right: 2vw;
 }
 .search-input{
     width: 10vw;
@@ -30,6 +31,7 @@
     font-size: 2vw;
     color: rgba(255, 107, 0, 1);
     font-family: 'Patrick Hand SC', cursive;
+    margin-right: 5vw;
 }
 .searchGraph{
     margin-left: 17.5vw;
