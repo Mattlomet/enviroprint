@@ -1,12 +1,12 @@
 .search-page{
-    margin-top: 10vw;
+    margin-top: 7vw;
 }
 .search-input-container{
     flex-wrap: wrap;
     justify-content: space-around;
 }
 .search-header{
-    font-size: 4vw;
+    font-size: 3vw;
     color: rgba(255, 107, 0, 1);
     font-family: 'Patrick Hand SC', cursive;
 }
@@ -24,8 +24,16 @@
     margin-left: 1vw;
 }
 .search-results{
-    margin-top: 3vw;
+    margin-top: 2vw;
+}
+.search-results-name{
+    font-size: 2vw;
+    color: rgba(255, 107, 0, 1);
+    font-family: 'Patrick Hand SC', cursive;
 }
 .searchGraph{
+    margin-left: 17.5vw;
+    width: 60vw;
+    height: 30vw;
     background-color: white;
 }

@@ -61,7 +61,9 @@ class Search extends Component {
             .then(
                 function(response) {
                     console.log(response.data);
-                    this.setState({ searchUser: response.data.user.username });
+                    this.setState({
+                        searchUser: response.data.user.username + "'s Graph"
+                    });
                     this.setState({
                         searchUtil: response.data.utilities || {}
                     });

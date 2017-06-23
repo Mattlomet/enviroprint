@@ -44,7 +44,7 @@ class App extends Component {
     render() {
         if (this.state.LogIn === false) {
             return (
-                <div>
+                <div className="sign-in-component">
                     <h1 className="app-header-sign-in">
                         Carbon Print
                     </h1>
