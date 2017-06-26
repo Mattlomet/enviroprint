@@ -73,7 +73,10 @@ class SignIn extends Component {
                         response.data.user_id
                     );
                 }.bind(this)
-            );
+            )
+            .catch(function(error) {
+                alert("The User info you have provided is invalid.");
+            });
     }
     createAccount() {
         axios

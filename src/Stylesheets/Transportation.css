@@ -1,9 +1,13 @@
-.transportation-div{}
 .gas-header{
-    font-size: 3vw;
+    font-size: 2vw;
     margin: 0 auto;
 }
 .miles-header{
-    font-size: 3vw;
+    font-size: 2vw;
     margin: 0 auto;
+}
+input{
+    height: 1vw;
+    color: rgba(255, 107, 0, 1);
+    font-family: 'Bubbler One', sans-serif;
 }

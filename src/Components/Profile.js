@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import ProfileBarGraph from "./ProfileBarGraph";
 import ProfilePieGraph from "./ProfilePieGraph";
+import downArrow from "../arrowdown.ico";
 import "../Stylesheets/Profile.css";
 
 class Profile extends Component {
@@ -74,6 +75,11 @@ class Profile extends Component {
                                 />
                             </div>
                         </div>
+                        <img
+                            alt="downarrow"
+                            src={downArrow}
+                            className="downArrow"
+                        />
                         <div className="profile-pie-graph">
                             <ProfilePieGraph
                                 utilities={this.state.utilities}

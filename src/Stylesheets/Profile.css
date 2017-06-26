@@ -50,7 +50,7 @@
     width: 48vw;
     margin: 0 auto;
     background-color: rgba(255, 255, 255,1);
-    margin-bottom: 2vw;
+    margin-bottom: 4vw;
     margin-top: 3vw;
 }
 .profile-bar-graph{
@@ -64,13 +64,18 @@
     margin-top: 1vw;
     margin-bottom: 2vw;
 }
+.downArrow{
+    height: 9vw;
+    width: 9vw;
+    padding-left: 25vw;
+    padding-right: 25vw;
+}
 .profile-pie-graph{
     height: 42vw;
     width: 75vw;
-    margin: 0 auto;
     background-color: rgba(255, 255, 255,1);
-    margin-bottom: 2vw;
-    margin-top: 3vw;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
 }
 .profile-pie-graph h4{
     font-family: 'Bubbler One', sans-serif;

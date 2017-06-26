@@ -21,7 +21,7 @@ class BarGraph extends Component {
             ],
             datasets: [
                 {
-                    label: "Co2",
+                    label: "Co2 in Pounds",
                     data: [
                         utilitiesYearly,
                         carYearly,

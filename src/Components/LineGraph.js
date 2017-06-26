@@ -80,7 +80,7 @@ class LineGraph extends Component {
             datasets: [
                 {
                     label: "Your Co2 Emission",
-                    backgroundColor: ["rgba(0, 247, 255, 0.75)"],
+                    backgroundColor: ["rgba(173, 255, 166,0.3)"],
                     data: [
                         jan,
                         feb,
@@ -97,26 +97,8 @@ class LineGraph extends Component {
                     ]
                 },
                 {
-                    label: "American Average",
-                    backgroundColor: ["rgba(255, 0, 0, 0.2)"],
-                    data: [
-                        americanJan,
-                        americanFeb,
-                        americanMarch,
-                        americanApril,
-                        americanMay,
-                        americanJune,
-                        americanJuly,
-                        americanAugust,
-                        americanSeptember,
-                        americanOctober,
-                        americanNovember,
-                        americanDecember
-                    ]
-                },
-                {
                     label: "Swedish Average",
-                    backgroundColor: ["rgba(0, 10, 255, 0.64)"],
+                    backgroundColor: ["rgba(255, 107, 0, 0.3)"],
                     data: [
                         swedenJan,
                         swedenFeb,
@@ -130,6 +112,24 @@ class LineGraph extends Component {
                         swedenOctober,
                         swedenNovember,
                         swedenDecember
+                    ]
+                },
+                {
+                    label: "American Average",
+                    backgroundColor: ["rgba(255, 255, 255, 1)"],
+                    data: [
+                        americanJan,
+                        americanFeb,
+                        americanMarch,
+                        americanApril,
+                        americanMay,
+                        americanJune,
+                        americanJuly,
+                        americanAugust,
+                        americanSeptember,
+                        americanOctober,
+                        americanNovember,
+                        americanDecember
                     ]
                 }
             ]

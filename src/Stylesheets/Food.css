@@ -1,15 +1,11 @@
-.food-component{
-    text-align: center;
-}
-.food-header{}
 .food-header-text{
-    font-size: 3vw;
+    font-size: 2vw;
     margin: 0 auto;
 }
 .selectFood{
     margin-left: 38vw;
     width: 20vw;
-    height: 2vw;
+    height: 1.5vw;
     font-size: 1vw;
     color: rgba(255, 107, 0, 1);
 }

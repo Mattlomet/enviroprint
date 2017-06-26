@@ -1,24 +1,24 @@
 .utilities-div{}
 .utilities-questions1{}
 .utilities-questions1-header{
-    font-size: 1vw;
+    font-size: 2vw;
     margin: 0 auto;
 }
 .utilities-questions2{}
 .utilities-questions2-header{
-    font-size: 1vw;
+    font-size: 2vw;
     margin: 0 auto;
 }
 .select{
-    width: 4vw;
-    height: 2vw;
+    width: 3vw;
+    height: 1.5vw;
     font-size: 1vw;
     color: rgba(255, 107, 0, 1);
 }
 .selectGas{
     text-align: center;
     width: 15vw;
-    height: 2vw;
+    height: 1.5vw;
     font-size: 1vw;
     color: rgba(255, 107, 0, 1);
 }

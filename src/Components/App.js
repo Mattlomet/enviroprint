@@ -12,6 +12,7 @@ import home from "../house.png";
 import account from "../account.png";
 import save from "../save-icon.png";
 import search from "../search.png";
+import downArrow from "../arrowdown.ico";
 
 class App extends Component {
     constructor() {
@@ -61,22 +62,22 @@ class App extends Component {
                             <ul className="unordered-list">
                                 <li
                                     className="listitem"
-                                    onClick={this.switchPageProfile}
-                                >
-                                    <img
-                                        className="account-image"
-                                        src={account}
-                                        alt="account"
-                                    />
-                                </li>
-                                <li
-                                    className="listitem"
                                     onClick={this.switchPageHome}
                                 >
                                     <img
                                         className="home-image"
                                         src={home}
                                         alt="home"
+                                    />
+                                </li>
+                                <li
+                                    className="listitem"
+                                    onClick={this.switchPageProfile}
+                                >
+                                    <img
+                                        className="account-image"
+                                        src={account}
+                                        alt="account"
                                     />
                                 </li>
                                 <li
@@ -127,6 +128,11 @@ class App extends Component {
                                 food={this.state.food}
                             />
                         </div>
+                        <img
+                            alt="downarrow"
+                            src={downArrow}
+                            className="downArrow"
+                        />
                         <div className="line-graph">
                             <LineGraph
                                 utilities={this.state.utilities}
@@ -151,22 +157,22 @@ class App extends Component {
                             <ul className="unordered-list">
                                 <li
                                     className="listitem"
-                                    onClick={this.switchPageProfile}
-                                >
-                                    <img
-                                        className="account-image"
-                                        src={account}
-                                        alt="account"
-                                    />
-                                </li>
-                                <li
-                                    className="listitem"
                                     onClick={this.switchPageHome}
                                 >
                                     <img
                                         className="home-image"
                                         src={home}
                                         alt="home"
+                                    />
+                                </li>
+                                <li
+                                    className="listitem"
+                                    onClick={this.switchPageProfile}
+                                >
+                                    <img
+                                        className="account-image"
+                                        src={account}
+                                        alt="account"
                                     />
                                 </li>
                                 <li className="listitem">
@@ -204,22 +210,22 @@ class App extends Component {
                             <ul className="unordered-list">
                                 <li
                                     className="listitem"
-                                    onClick={this.switchPageProfile}
-                                >
-                                    <img
-                                        className="account-image"
-                                        src={account}
-                                        alt="account"
-                                    />
-                                </li>
-                                <li
-                                    className="listitem"
                                     onClick={this.switchPageHome}
                                 >
                                     <img
                                         className="home-image"
                                         src={home}
                                         alt="home"
+                                    />
+                                </li>
+                                <li
+                                    className="listitem"
+                                    onClick={this.switchPageProfile}
+                                >
+                                    <img
+                                        className="account-image"
+                                        src={account}
+                                        alt="account"
                                     />
                                 </li>
                             </ul>
