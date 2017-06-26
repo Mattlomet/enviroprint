@@ -2,6 +2,7 @@
   "name": "enviroprint",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://carbonprint.github.io/enviroprint",
   "proxy": "https://carbonprint-backend.herokuapp.com/",
   "dependencies": {
     "chart.js": "git+https://github.com/danmolitor/Chart.js.git#v2.0-dev",
