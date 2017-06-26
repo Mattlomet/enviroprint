@@ -107,7 +107,7 @@ class Profile extends Component {
     componentWillMount() {
         var userid = this.props.userid;
         axios
-            .get("/utilities/show", {
+            .get("https://carbonprint-backend.herokuapp.com/utilities/show", {
                 params: {
                     user_id: userid
                 }
@@ -149,7 +149,7 @@ class Profile extends Component {
         var foodMonth = this.props.food.month || 0;
         var foodYear = this.props.food.year || 0;
         axios
-            .post("/utilities", {
+            .post("https://carbonprint-backend.herokuapp.com/utilities", {
                 data: {
                     day: utilDay,
                     month: utilMonth,
@@ -160,7 +160,7 @@ class Profile extends Component {
             .then(function(response) {
                 console.log(response);
                 axios
-                    .post("/cars", {
+                    .post("https://carbonprint-backend.herokuapp.com/cars", {
                         data: {
                             day: carDay,
                             month: carMonth,
@@ -171,58 +171,73 @@ class Profile extends Component {
                     .then(function(response) {
                         console.log(response);
                         axios
-                            .post("/planes", {
-                                data: {
-                                    day: planeDay,
-                                    month: planeMonth,
-                                    year: planeYear,
-                                    user_id: userid
+                            .post(
+                                "https://carbonprint-backend.herokuapp.com/planes",
+                                {
+                                    data: {
+                                        day: planeDay,
+                                        month: planeMonth,
+                                        year: planeYear,
+                                        user_id: userid
+                                    }
                                 }
-                            })
+                            )
                             .then(function(response) {
                                 console.log(response);
                                 axios
-                                    .post("/trains", {
-                                        data: {
-                                            day: trainDay,
-                                            month: trainMonth,
-                                            year: trainYear,
-                                            user_id: userid
+                                    .post(
+                                        "https://carbonprint-backend.herokuapp.com/trains",
+                                        {
+                                            data: {
+                                                day: trainDay,
+                                                month: trainMonth,
+                                                year: trainYear,
+                                                user_id: userid
+                                            }
                                         }
-                                    })
+                                    )
                                     .then(function(response) {
                                         console.log(response);
                                         axios
-                                            .post("/subways", {
-                                                data: {
-                                                    day: subDay,
-                                                    month: subMonth,
-                                                    year: subYear,
-                                                    user_id: userid
+                                            .post(
+                                                "https://carbonprint-backend.herokuapp.com/subways",
+                                                {
+                                                    data: {
+                                                        day: subDay,
+                                                        month: subMonth,
+                                                        year: subYear,
+                                                        user_id: userid
+                                                    }
                                                 }
-                                            })
+                                            )
                                             .then(function(response) {
                                                 console.log(response);
                                                 axios
-                                                    .post("/buses", {
-                                                        data: {
-                                                            day: busDay,
-                                                            month: busMonth,
-                                                            year: busYear,
-                                                            user_id: userid
+                                                    .post(
+                                                        "https://carbonprint-backend.herokuapp.com/buses",
+                                                        {
+                                                            data: {
+                                                                day: busDay,
+                                                                month: busMonth,
+                                                                year: busYear,
+                                                                user_id: userid
+                                                            }
                                                         }
-                                                    })
+                                                    )
                                                     .then(function(response) {
                                                         console.log(response);
                                                         axios
-                                                            .post("/foods", {
-                                                                data: {
-                                                                    day: foodDay,
-                                                                    month: foodMonth,
-                                                                    year: foodYear,
-                                                                    user_id: userid
+                                                            .post(
+                                                                "https://carbonprint-backend.herokuapp.com/foods",
+                                                                {
+                                                                    data: {
+                                                                        day: foodDay,
+                                                                        month: foodMonth,
+                                                                        year: foodYear,
+                                                                        user_id: userid
+                                                                    }
                                                                 }
-                                                            })
+                                                            )
                                                             .then(function(
                                                                 response
                                                             ) {
@@ -241,7 +256,7 @@ class Profile extends Component {
     componentDidMount() {
         var userid = this.props.userid;
         axios
-            .get("/users/show", {
+            .get("https://carbonprint-backend.herokuapp.com/users/show", {
                 params: {
                     user_id: userid
                 }

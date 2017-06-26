@@ -60,7 +60,7 @@ class SignIn extends Component {
     }
     logIn() {
         axios
-            .get("/users", {
+            .get("https://carbonprint-backend.herokuapp.com/users", {
                 params: {
                     username: this.state.username,
                     password: this.state.password
@@ -80,7 +80,7 @@ class SignIn extends Component {
     }
     createAccount() {
         axios
-            .post("/users", {
+            .post("https://carbonprint-backend.herokuapp.com/users", {
                 data: {
                     username: this.state.username,
                     password: this.state.password

@@ -53,7 +53,7 @@ class Search extends Component {
         var usernameValue = document.getElementsByClassName("search-input")[0]
             .value;
         axios
-            .get("/trains", {
+            .get("https://carbonprint-backend.herokuapp.com/trains", {
                 params: {
                     username: usernameValue
                 }
